@@ -1,5 +1,9 @@
+//to run: node index
+//tsc index
 //tsc --init 
 // tsc index -w
+
+
 let age:number = 20;
 let course:string = "Test";
 let is_true:boolean = true; 
@@ -52,8 +56,17 @@ class Person {
         this.lastName = lastName;
     }
 }
-//var person:Person = new Person('Harsh','Gurm');
 
-//new Person();
+class Male extends Person{
+    gender: number;
+
+    constructor(firstName:string, lastName:string, age:number){
+        super(firstName, lastName);
+        this.age = age;
+    }
+}
+var pers: +Person = new Person('Harsh','Gurm');
+
+console.log(pers);
 
 

@@ -31,5 +31,5 @@ var Person = /** @class */ (function () {
     }
     return Person;
 }());
-//var person:Person = new Person('Harsh','Gurm');
-//new Person();
+var pers = new Person('Harsh', 'Gurm');
+console.log(pers);
