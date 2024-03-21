@@ -1,4 +1,6 @@
 import { Component, Input} from '@angular/core';
+import { Person } from '../person';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-item',
@@ -9,4 +11,5 @@ import { Component, Input} from '@angular/core';
 })
 export class ItemComponent {
   @Input() item = '';
+  @Input() per:Person[] = [];
 }
