@@ -1,0 +1,10 @@
+<!-- iterate over the array of students using the directive *ngFor
+the *ngFor directive loops over every student object in the array -->
+<!-- wrapped between 2 curly brackets is the name of each student we iterate over.
+This approach of displaying data, using {{}} is called interpolation -->
+<div>
+    <h2>My Students</h2>
+    <ul>
+        <li *ngFor="let student of studentsArray">{{student.name}}</li>
+    </ul>
+</div>
