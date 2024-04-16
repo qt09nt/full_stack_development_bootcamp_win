@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomePageModule } from './home/home.module';
+
 
 const routes: Routes = [
   {
@@ -11,7 +13,24 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'input',
+    loadChildren: () => import('./input/input.module').then( m => m.InputPageModule)
+  },
+  {
+    path: 'buttons',
+    loadChildren: () => import('./buttons/buttons.module').then( m => m.ButtonsPageModule)
+  },
+  {
+    path: 'list-item',
+    loadChildren: () => import('./list-item/list-item.module').then( m => m.ListItemPageModule)
+  },
+  {
+    path: 'icon',
+    loadChildren: () => import('./icon/icon.module').then( m => m.IconPageModule)
+  },
 ];
+
 
 @NgModule({
   imports: [
