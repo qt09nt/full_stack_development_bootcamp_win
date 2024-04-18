@@ -33,6 +33,14 @@ const routes: Routes = [
     path: 'alerts',
     loadChildren: () => import('./alerts/alerts.module').then( m => m.AlertsPageModule)
   },
+  {
+    path: 'toast',
+    loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
+  },
+  {
+    path: 'cards',
+    loadChildren: () => import('./cards/cards.module').then( m => m.CardsPageModule)
+  },
 ];
 
 

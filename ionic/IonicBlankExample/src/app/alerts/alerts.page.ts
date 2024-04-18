@@ -49,6 +49,7 @@ export class AlertsPage implements OnInit {
     },
   ];
 
+  
   showRole(ev:any) {
     console.log('The role is', ev.detail.role);
   }
