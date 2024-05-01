@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -23,14 +23,6 @@ const user = [
 app.get('/', (request, response) => {
     response.redirect('/customers');
 });
-
-app.get('/customers/:id', (request, response)=>{
-    //try to find the customer using find function
-    var customer = customers.find(x => x.id == request.params.id);
-    if(!customer) response.status(404).send('Customer not found');
-    response.send(customer);
-
-}
 
 app.get('/customers', (request, response) => {
 
