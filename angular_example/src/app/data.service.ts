@@ -8,16 +8,14 @@ export class DataService {
 
   constructor() { }
 
-
-
-  //getPersonById(id:number): Person | undefined {
-  //  return this.persons.find(p => p.id == id)
-  //}
-
-
-  getAllPersons(): Person[]{
+  getAllPersons(): Person[] {
     return this.persons;
   }
+
+  // getPersonById(id:number): Person | undefined {
+  //   return this.persons.find(p => p.id == id)
+  // }
+
   persons:Person[] = [
     { id:1, name: "Harsh" },
     { id:2, name: "Queen" },
@@ -25,6 +23,7 @@ export class DataService {
     { id:5, name: "David" },
     { id:6, name: "Renan" },
     { id:7, name: "Prosper" },
-    { id:8, name: "Nora"},
+    { id:8, name: "Nora" },
   ];
+  
 }

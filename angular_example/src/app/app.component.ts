@@ -6,11 +6,6 @@ import { ItemComponent } from './item/item.component';
 import { DataService } from './data.service';
 import { FormsModule } from '@angular/forms';
 
-<div *ngIf="person">
-  <p>Custom Person ID: {{person.id}}</p>
-  <p>Custom Person Name: {{personalbar.name}}</p>
-</div>
-
 
 @Component({
   selector: 'app-root',
@@ -19,13 +14,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-
 export class AppComponent {
-  title:string = 'angular_example';
 
-  //person: Person = {id:number, name:string } = {id:1, name: "Harsh"};
+  title:string = 'Angular Example';
 
-  person: Person = {id:1, name: "Harsh"};
+  person: Person = { id:1, name: "Harsh" };
 
   persons:Person[] = [];
   personService: DataService = inject(DataService);
@@ -37,35 +30,29 @@ export class AppComponent {
   //   { id:5, name: "David" },
   //   { id:6, name: "Renan" },
   //   { id:7, name: "Prosper" },
+  //   { id:8, name: "Nora" },
   // ];
 
-  constructor(){
+  constructor() {
     this.persons = this.personService.getAllPersons();
   }
 
-  <input [(ngModel)]="title">
+  imageUrl:string = "https://buffer.com/library/content/images/2023/10/free-images.jpg";
 
-  <input ([ngModel])="title">
-
-  Value: {{ title }}
-
-
-  imageUrl:string ="https://buffer.com/library/content/images/2023/10/free-images.jpg";
-
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
 
   color_yellow:string="yellow";
-  var color_yellow = "yellow";
 
   styleClass:string="color:green; font-size: 30px;"
 
-  clearImage(){
-    this.imageUrl = " ";
-  } 
+  // class_1:string = "color:green; font-size: 30px";
 
-  //Add another button and show the Image
-  showImage(){
-    this.imageUrl='https://buffer.com/library/content/images/2023/10/free-images.jpg';
+  clearImage() {
+    this.imageUrl = '';
   }
 
+  showImage() {
+    this.imageUrl = 'https://buffer.com/library/content/images/2023/10/free-images.jpg';
+  }
 
+}
