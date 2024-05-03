@@ -1,0 +1,7 @@
+{
+  "name": "themeExample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

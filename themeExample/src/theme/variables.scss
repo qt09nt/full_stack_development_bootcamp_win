@@ -1,0 +1,38 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+***************************
+:root {
+ --ion-background-color: #1c1c1d;
+ --ion-text-color: #fff;
+}
+ 
+:root.md {
+     --ion-background-color: #1c1c1d;
+     --ion-text-color: #fff;
+     --ion-item-background:#1ba3c5;
+}
+
+//Create a new page
+//add some elements ...similar to what we did today
+//apply component specific style
+
+// Database - 2 days
+// Design the tables
+// Create the database
+
+// Backend - NodeJs - 4 days
+// Create API to get the data
+// GET 
+// POST
+// DELETE
+// UPDATE
+
+// Frontend - Angular - 4 days
+// Write services to get the data from:
+// GET
+// POST
+// DELETE
+// UPDATE
+
+// Testing deployment - 3 days
