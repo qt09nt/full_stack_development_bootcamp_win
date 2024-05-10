@@ -1,0 +1,21 @@
+<button (click)="getAllEmployees()">All Employees</button>
+<div class="employees-data" *ngIf="employees.length > 0">
+  <h2>List of all the employees</h2>
+  <table>
+    <thead>
+      <th *ngFor="let header of employee_data">{{ header }}</th>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employee_id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.department_name }}</td>
+        <td><button (click)="toggleEditing(employee.employee_id)">Edit</button></td>
+        <td><button>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit *ngIf="isEditing" [isEditing]="isEditing" [Id]="selected"></app-edit>

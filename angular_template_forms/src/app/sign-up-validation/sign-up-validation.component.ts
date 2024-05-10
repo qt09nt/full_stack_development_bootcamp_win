@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 export class SignUpValidationComponent {
 
   signUpDetails = {
-    email: ''
+    email: '',
+    password: '',
+    first_name: '',
+    last_name: '',
+    gender: '',
   }
 
-  
+  onSubmit(form:any){
+    if(form.valid)
+      console.log('Form', form);
+    }
   //test:any;
 }

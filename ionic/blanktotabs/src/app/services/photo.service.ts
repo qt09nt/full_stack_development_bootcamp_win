@@ -18,7 +18,6 @@ export class PhotoService {
 
   public async addNewToGallery(){
     const capturedPhoto = await Camera.getPhoto({
-   
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
       quality: 100

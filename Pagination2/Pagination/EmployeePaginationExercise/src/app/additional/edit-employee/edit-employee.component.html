@@ -1,0 +1,11 @@
+<div *ngIf="selectedEmployee" id="container" class="container p-5 my-5">
+  <div class="form-group">
+    <label style="display: block;" for="name">Name</label>
+    <input style='width: 70%;' type="text" [(ngModel)]="Name" [value]="selectedEmployee.name" class="form-control" id="name" placeholder="Enter Employee Name">
+  </div>
+  <div class="form-group">
+    <label style="display: block;" for="dept">Department</label>
+    <input style='width: 70%;' type="text" [(ngModel)]="Department" [value]="selectedEmployee.department_name" id="dept" class="form-control" placeholder="Enter Employee Department">
+  </div>
+  <button id="submit" type="button" (click)="EditEmployee()" class="btn btn-primary">Apply Changes</button>
+</div>

@@ -1,3 +1,6 @@
+<h1>Parent Component</h1>
+<h2>website title {{ title }}</h2>
+
 <!-- <app-students [name_in_child]="name_in_parent"></app-students> -->
 
 <!-- <app-students [websiteTitle]="title" [childPerson]="person"></app-students>  -->
@@ -6,6 +9,9 @@
 <ul>
   <li> *ngFor print(students) </li>
 </ul>
+
+<input type="text" [[(ngModel)]="title">
+
 <!-- 
 <input type="text" [ngModel] ="title">
 

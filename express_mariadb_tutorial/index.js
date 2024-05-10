@@ -18,9 +18,8 @@ app.use(function (req, res, next) {
 })
 app.use(express.json());
 
-
 app.use(cors());
-
+// app.use(cors({origin: 'http://localhost:4200/'}));
 
 //get all the employees
 app.get('/employees/', async (request, response) => {

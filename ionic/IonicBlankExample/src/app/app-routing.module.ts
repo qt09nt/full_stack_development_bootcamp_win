@@ -41,6 +41,14 @@ const routes: Routes = [
     path: 'cards',
     loadChildren: () => import('./cards/cards.module').then( m => m.CardsPageModule)
   },
+  {
+    path: 'reorderlist',
+    loadChildren: () => import('./reorderlist/reorderlist.module').then( m => m.ReorderlistPageModule)
+  },
+  {
+    path: 'grids',
+    loadChildren: () => import('./grids/grids.module').then( m => m.GridsPageModule)
+  },
 ];
 
 

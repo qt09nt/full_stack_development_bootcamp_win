@@ -1,0 +1,13 @@
+<div class="edit" *ngIf="isEditing">
+  <div class="name-edit">
+    <label for="name">Name</label>
+    <input id="name" placeholder="Employee Name" type="text" [value]="selected_employee.name" [(ngModel)]="name">
+  </div>
+  <div class="dept-edit">
+    <label for="dept">Department</label>
+    <input id="dept" placeholder="Department" type="text" [(ngModel)]="derpartment">
+  </div>
+  <div class="submit">
+    <button type="submit" (click)="editEmployee()">Edit</button>
+  </div>
+</div>

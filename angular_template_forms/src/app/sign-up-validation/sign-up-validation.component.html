@@ -1,21 +1,77 @@
 <div class="container">
 
+    <form #signUpForm="ngForm" (ngSubmit)="onSubmit"(signUpForm)></form>
+
     <div class="form-group">
 
     <div class="form-group">
         <label for="email">Email</label>
-        <input class = "form-control" type="email" name="email" [(ngModel)]="signUpDetails.email" required #emailCheck="ngModel">
+        <input class = "form-control" type="email" name="email" [(ngModel)]="signUpDetails.email" pattern=".*@[a-z0-9.-]" required #emailCheck="ngModel">
                 
         <div *ngIf="emailCheck.touched && emailCheck.invalid" class="text-danger">
             Email is required
         </div>
-            
+          
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" [(ngModel)]="signUpDetails.password"
+             required #passwordCheck="ngModel">
+            <div *ngIf="passwordCheck.touched && passwordCheck.invalid" class="text-danger">
+                Password is required
+            </div>            
+        </div>
         
-       <div>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input class="form-control" type="text" name="first_name" [(ngModel)]="signUpDetails.first_name"
+             required #passwordCheck="ngModel">
+            <div *ngIf="firstNameCheck.touched && firstNameCheck.invalid" class="text-danger">
+                First Name is required
+            </div>            
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input class="form-control" type="text" name="last_name" [(ngModel)]="signUpDetails.last_name"
+             required #lastNameCheck="ngModel">
+            <div *ngIf="lasstNameCheck.touched && lastNameCheck.invalid" class="text-danger">
+                Last Name is required
+            </div>            
+        </div>
+
+        <!-- <div *ngIF="emailCheck.touched && emailCheck?.errors?.pattern?.actualValue" class="text-danger">
+            Email is invalid.
+        </div> -->
+       
+        <div class="form-group">
+            <label for="gender">Label</label>
+            <!-- inherit the radio button from bootstrap-->
+            <div class="form-check"></div>
+                <input class="form-check-input" type="radio" name="gender" value="male">
+                <label class="form-check-label" for="male">Male</label>
+
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" value="female" [(ngModel)]="signUpDetails.gender">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+
+        </div>
+
+
+        <!-- <div> 
             Invalid {{emailCheck.invalid}}<br>
             Valid {{emailCheck.valid }}<br>
             Errors {{ emailCheck.errors | json }}<br>
             Touched {{ emailCheck.touched }}<br>
+             -->
+             <button type="submit" class="btn btn-primary">Submit</button>
+
         </form>  
+
+
 </div>
 
