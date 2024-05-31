@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { AuthdataService } from '../authdata.service';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -8,7 +9,9 @@ import { AuthdataService } from '../authdata.service';
 })
 export class SigninComponent {
 
+
   authService: AuthdataService = inject(AuthdataService);
+  router: Router = inject(Router);
 
   signInDetails = {
     username: '',
@@ -20,8 +23,10 @@ export class SigninComponent {
     if (form.form.valid)
       this.authService.signIn(form.form.value).subscribe((result:string) => {
         localStorage.setItem('token', result);
+        this.router.navigate(['home']);
       })
   }
+  
   showToken(){
     console.log()
     return this.authService.getToken();
